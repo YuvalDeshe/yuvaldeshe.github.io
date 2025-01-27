@@ -245,7 +245,7 @@ form button {
 
     background-color:#578E7E;
     color: black;
-    width: 12.5%;
+    width: fit-content;
     height: 35px;
     align-self: center;
     transition-duration: 500ms;
