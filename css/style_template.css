@@ -1,0 +1,266 @@
+/* General Styles */
+body {
+    margin: 0px;
+    background-color: #F5ECD5;
+}
+a {
+    color:blue;
+    text-decoration: none;
+}
+a:hover {
+    color: #3D3D3D;
+    transition: color 600ms linear;
+}
+p {
+    color: #3D3D3D;
+}
+
+/* Nav Styles */
+nav {
+    background-color: #FFFAEC; 
+    margin: 0px;
+    box-shadow: 0px 2px 2px black;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+}
+
+nav p, nav a {
+    font-size: 20px;
+    padding: 5px;
+    margin: 0;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background-color: #578E7E; 
+    position: fixed; 
+    bottom: 0;
+    box-shadow: 0px -2px #3D3D3D;
+    display: flex;
+    justify-content: center;
+}
+
+footer a, footer p {
+    padding: 5px;
+    margin: 0;
+
+}
+
+/* Splash Section */
+.splash {
+    padding: 0 20px;
+    background-color: #F5ECD5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.splash h1 {
+    font-size: 40px;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.splash img {
+    border-radius: 25%;
+    border: 2px solid #3D3D3D;
+    display: inline-block;
+    margin: 1em;
+    width: 300px;
+}
+
+.splash p {
+    font-size: 24px;
+    font-family: "Red Hat Text", "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: inline;
+}
+
+/* Horizontal Rules */
+hr {
+    border-style: dashed;
+    border-width: medium;
+    border-color: #3D3D3D;
+}
+
+#section-hr {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #3D3D3D;
+}
+
+/* Sections */
+section {
+    background-color: #F5ECD5;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Section Headings */
+section h2 {
+    margin: 0 auto auto auto;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Paragraph Styles */
+section p {
+    font-family: "Red Hat Text", "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+/* List Styles */
+ul {
+    color: #3D3D3D;
+    display: block;
+    margin: 0 40%;
+    width: auto;
+    font-family: "Red Hat Text", "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+dl {
+    color: #3D3D3D;
+    display: grid;
+    gap: 0;
+    border: 1px solid #3D3D3D;
+    grid-template:  auto auto / minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-auto-rows: auto;
+    margin: 1em 25%;
+    width: 50%;
+    font-family: "Red Hat Text", "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+dl dt{
+    text-align: center;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #3D3D3D;
+}
+
+dl dd{
+    margin: 0;
+    text-align: center;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #3D3D3D;
+}
+
+/* Project Section */
+.three-col {
+    display: grid;
+    margin: 10%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-self: center;
+    gap: 50px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px 0;
+    /* style the card. make sure to find a picture for each one and add it to the html! */
+}
+
+.card ul {
+    margin: 1em;
+}
+
+.card h3 {
+    margin: 1em;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* Contact Page Styles */
+.one-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+    justify-self: center;
+    width: 35%;
+}
+
+
+form input, form textarea {
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    font-family: "Red Hat Text", "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+form input:focus, form textarea:focus {
+    border-color: black;
+    transition: border-color 0.5s linear;
+}
+
+form input:hover, form textarea:hover {
+    transition-duration: 10ms;
+    border-color: black;
+}
+
+form button {
+    font-family: "Red Hat Text", "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+
+    background-color:#578E7E;
+    color: black;
+    width: 12.5%;
+    height: 35px;
+    align-self: center;
+    transition-duration: 500ms;
+    box-shadow: 1px 1px 1px black;
+}
+
+form button:hover {
+    transition-duration: 500ms;
+    background-color:#F5ECD5;
+    color:#578E7E;
+}
+
+#thankyou {
+    text-align: center;
+    font-size: 32px;
+    font-family: "Outfit", serif;
+    color: #578E7E;
+}
