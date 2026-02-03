@@ -1,7 +1,15 @@
+/* Initialize variables: */
+:root {
+    --primary-background-color: #35183F;
+    --secondary-background-color: #24213C;
+    --accent-color: #6A3C66;
+}
+
+
 /* General Styles */
 body {
-    margin: 0px;
-    background-color: #F5ECD5;
+    /* margin: 1em; */
+    background-color: var(--secondary-background-color);
 }
 a {
     color:blue;
@@ -17,7 +25,7 @@ p {
 
 /* Nav Styles */
 nav {
-    background-color: #FFFAEC; 
+    background-color: var(--secondary-background-color); 
     margin: 0px;
     box-shadow: 0px 2px 2px black;
     display: flex;
@@ -52,7 +60,7 @@ footer a, footer p {
 /* Splash Section */
 .splash {
     padding: 0 20px;
-    background-color: #F5ECD5;
+    background-color: var(--primary-background-color);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,20 +94,19 @@ footer a, footer p {
 
 /* Horizontal Rules */
 hr {
-    border-style: dashed;
-    border-width: medium;
-    border-color: #3D3D3D;
-}
-
-#section-hr {
-    border-style: dashed;
-    border-width: 1px;
-    border-color: #3D3D3D;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--accent-color);
+    margin: 0px;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    border-radius: 50%;
+    background-color: var(--primary-background-color);
 }
 
 /* Sections */
 section {
-    background-color: #F5ECD5;
+    background-color: var(--primary-background-color);
     padding: 2em;
     display: flex;
     flex-direction: column;
