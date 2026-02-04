@@ -10,16 +10,22 @@
 
 /* Contact overlay */
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 1;
+    /* Specify a stack order in case you're using a different order for other elements */
 }
 
 /* collapsible dropdown */
@@ -106,7 +112,10 @@ p {
     color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
     color: var(--heading-color);
 }
@@ -153,7 +162,7 @@ nav a {
     font-size: 20px;
     padding: 5px;
     margin: 0;
-    color:var(--text-color); 
+    color: var(--text-color);
     text-decoration: none
 }
 
@@ -191,6 +200,11 @@ footer p {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.splash button {
+    padding: 1em;
+    font-size: 20px;
 }
 
 .splash h1 {
@@ -325,7 +339,8 @@ dl dd {
 }
 
 .card {
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -464,5 +479,13 @@ form button:hover {
 
     .optional {
         display: none;
+    }
+
+    .card {
+        margin-left: 12.5%;
+        margin-top: 10%;
+        height: 50%;
+        width: 75%;
+        word-break: break-all;
     }
 }
