@@ -86,24 +86,6 @@
     margin-left: 25%;
 }
 
-@media (max-width: 900px) {
-    .collapsible-flex-container>div {
-        width: 100%;
-    }
-
-    .collapsible-flex-container {
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
-    .collapsible-flex-container img {
-        margin: 0px;
-    }
-
-    .collapsible-flex-container>div p {
-        margin: 0px;
-    }
-}
 
 /* General Styles */
 body {
@@ -450,4 +432,33 @@ form button:hover {
     font-size: 32px;
     font-family: "Outfit", serif;
     color: #578E7E;
+}
+
+/* mobile support */
+@media (max-width: 900px) {
+    .collapsible-flex-container>div {
+        width: 100%;
+    }
+
+    .collapsible-flex-container {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .collapsible-flex-container img {
+        margin: 0px;
+    }
+
+    .collapsible-flex-container>div p {
+        margin: 0px;
+    }
+
+    .splash {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .flex-item {
+        word-break: break-all;
+    }
 }
