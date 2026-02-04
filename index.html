@@ -9,119 +9,314 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div id="overlay" onclick="off()">
+        <div class="card" onclick="event.stopPropagation()">
+                <button style="align-self:flex-end; cursor: pointer; margin:1em;" onclick="off()">x</button>
+            <div>
+                <h1 style="align-self:center; text-decoration: underline">Contact Yuval:</h1>
+            </div>
+            <div class="card-inner">
+                <h3>Email: <a target="_blank" style="color:var(--text-color);"
+                        href="mailto:yuvaldeshe@gmail.com">yuvaldeshe@gmail.com</a></h3>
+                <h3>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/yuvaldeshe/"><i
+                            class="fab fa-linkedin"></i></a></h3>
+                <h3>Phone: <a target="_blank" style="color:var(--text-color);" href="tel:404-542-8189">(404)
+                        542-8189</a>
+                </h3>
+            </div>
+        </div>
+    </div>
     <nav>
-        <p>Yuval Deshe</p>
-        <p><a href=./contact.html>Contact Yuval</a></p>
+        <a href="tel:404-542-8189">(404) 542-8189</a>
+        <a target="_blank" href="https://www.linkedin.com/in/yuvaldeshe/">Yuval Deshe</a>
+        <a href="mailto:yuvaldeshe@gmail.com">yuvaldeshe@gmail.com</a>
     </nav>
     <section class="splash">
         <div>
             <h1>Yuval Deshe</h1>
+            <h2>he/they</h2>
+            <br>
+            <button onclick="on()">Contact</button>
+            <br><br>
             <p>
-                3720 Kentwood Ct ▪️ Suwanee GA, 30024 ▪ 404-542-8189 ️▪ yuvaldeshe@gmail.com
+                3720 Kentwood Ct ▪ Suwanee GA, 30024 ▪ 404-542-8189 ️▪ yuvaldeshe@gmail.com
             </p>
-            <br><br><br>
+            <br><br><br><br>
             <p>
-                I'm a third-year student at UGA, pursuing a major in Computer Science and a minor in Cognitive Science. I am currently interested in learning more about software development and AI.
+                I'm a fourth-year student at UGA, pursuing a major in Computer Science and a minor in Cognitive
+                Science.
+                <br><br>
+                I am currently looking for full-time opportunities in software engineering or AI.
             </p>
         </div>
-        <img src="./images/headshot.jpg" alt="yuval deshe headshot">
+        <img onclick="on()" src="./images/headshot.jpg" alt="yuval deshe headshot">
     </section>
     <hr>
     <section>
-        <h2>Education</h2>
-        <p>
-            UGA - 2022-2026
-            <br>
-            Major: Computer Science
-            <br>
-            Minor: Cognitive Science
-            <br>
-            GPA: 3.92
-            <br>
-            Relevant courses: Algorithms (Graduate level), Computer Architecture, Web Programming, Systems Programming, Intro to Cognitive Science
-        </p>
-    </section>
-    <hr>
-    <section>
-        <h2>Honors and Awards</h2>
-        <dl>
-            <dt>Counselor of the Week</dt>
-            <dd>July 2021</dd>
-            <dt>UGA Dean's List</dt>
-            <dd>Fall 2024</dd>
-        </dl>
-    </section>
-    <hr>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>C</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Unix/Linux</li>
-            <li>Bash</li>
-            <li>Vim</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Leadership and Experience</h2>
-        <dl>
-            <dt>The Niche @ UGA - Cook Oct</dt>
-            <dd><i>Oct. - Dec. 2023</i></dd>
-            <dt>Your Pie - Team Member</dt>
-            <dd><i>Sept. 2020 - Apr. 2021</i> <br>& <i>Oct. 2022 - Feb. 2023</i></dd>
-            <dt><a target="_blank" href="https://www.atlantajcc.org/">MJCCA</a>- Summer Camp Counselor</dt>
-            <dd><i>Apr. - Jul. 2021</i></dd>
-        </dl>
-    </section>
-    <hr>
-    <section>
-        <h2>Projects</h2>
-        <div class="three-col">
-            <div class="card">
-                <img src="./images/bash.png" alt="bash shell">
-                <h3><a href="https://github.com/Yuval-Deshe/shell/">Bash Shell</a></h3>
+        <div class="section-inner">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>University of Georgia, Franklin College of Arts and Sciences</h3>
+                </li>
+                <li>
+                    <h3>Bachelors of Science in Computer Science, expected 2026 </h3>
+                </li>
+                <li class="indent">
+                    <h3>Minor: Cognitive Science</h3>
+                </li>
+                <li>
+                    <h3>GPA: 3.93/4.0</h3>
+                </li>
+            </ul>
+            <button type="button" class="collapsible">
+                <h3>Relevant Coursework</h3>
+            </button>
+            <div class="collapsible-content">
                 <ul>
-                    <li>Familiarized myself with function calls in C by using them to simulate a Bash shell.</li>
-                    <li>Furthered my understanding of Unix's commands and file structure.</li>
-                    <li>Formatted the text prompt to appear the same as a regular Bash shell.</li>
+                    <li>Algorithms (Graduate Level)</li>
+                    <li>Software Engineering (Graduate Level)</li>
+                    <li>Operating Systems (Graduate Level)</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Calculus II</li>
+                    <li>Linear Algebra</li>
+                    <li>Data Structures</li>
+                    <li>Web Programming</li>
                 </ul>
             </div>
-            <div class="card">
-                <img src="./images/trivia.webp" alt="trivia">
-                <h3><a href="https://github.com/Yuval-Deshe/cs1302-api/">Trivia Game</a></h3>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="section-inner">
+            <h2>Skills</h2>
+
+            <button type="button" class="collapsible">
+                <h3>Programming Skills</h3>
+            </button>
+            <div class="collapsible-content">
                 <ul>
-                    <li>Gained experience with APIs using the OpenTriviaDB API and Merriam-Webster Dictionary API to
-                        generate a
-                        trivia game and search for the dictionary definition of the correct answer once an answer was
-                        selected.
-                    </li>
-                    <li>Used JavaFX to create an interface and graphics to augment the user's experience.</li>
+                    <li>Java</li>
+                    <li>JavaScript/TypeScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>C/C++</li>
+                    <li>Bash Shell & Scripting</li>
+                    <li>MongoDB</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind CSS</li>
+                    <li>MIPS Assembly</li>
+                    <li>SQL</li>
                 </ul>
             </div>
-            <div class="card">
-                <img src="./images/pos-neg.webp" alt="positive and negative">
-                <h3>Count Positive and Negatives</h3>
+            <button type="button" class="collapsible">
+                <h3>Development Skills</h3>
+            </button>
+            <div class="collapsible-content">
                 <ul>
-                    <li>Read an integer array in MIPS and counted the amount of positive and negative numbers contained
-                        within
-                        it.</li>
-                    <li>Created a loop to iterate through the array and read each individual element.</li>
+                    <li>Agile Development</li>
+                    <li>SCRUM Development</li>
+                    <li>Software Engineering</li>
+                    <li>Git version control</li>
                 </ul>
+            </div>
+            <button type="button" class="collapsible">
+                <h3>Software</h3>
+            </button>
+            <div class="collapsible-content">
+                <ul>
+                    <li>VSCode</li>
+                    <li>Vim</li>
+                    <li>Git</li>
+                    <li>Eclipse</li>
+                    <li>Figma</li>
+                    <li>Miro</li>
+                    <li>Bash</li>
+                    <li>Linux/Unix</li>
+                    <li>Microsoft Excel</li>
+                    <li>Microsoft PowerPoint</li>
+                    <li>Microsoft Word</li>
+                </ul>
+            </div>
+            <button type="button" class="collapsible">
+                <h3>Soft Skills</h3>
+            </button>
+            <div class="collapsible-content">
+                <ul>
+                    <li>Communication</li>
+                    <li>Conflict Resolution</li>
+                    <li>Collaboration</li>
+                    <li>Teamwork</li>
+                    <li>Time management</li>
+                    <li>Task prioritization</li>
+                    <li>Problem Solving</li>
+                    <li>Critical Thinking</li>
+                    <li>Leadership</li>
+                    <li>Adaptability</li>
+                    <li>Flexibility</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="section-inner">
+            <h2>Projects</h2>
+            <button type="button" class="collapsible">
+                <h3>AI Computer Vision Research</h3>
+            </button>
+            <div class="collapsible-content">
+                <div class="collapsible-flex-container">
+                    <div style="max-width:100%;">
+                        <h3>CURO Undergraduate Research - <a href="https://herolab.org/">HeRo Lab</a> | Spring 2026</h3>
+                        <p>The HeRo Lab has a <a href="https://github.com/herolab-uga/heroswarmv2">heterogeneous robot
+                                swarm</a> that can perform a few simple tasks.
+                            One of these tasks is an experiment called "Rendezvous," where the robots calculate the
+                            direction and
+                            speed they
+                            must move to reach a central point with all of the involved robots.
+                            Currently, the robots cannot perform any navigation around obstacles, nor can they replan
+                            their
+                            route if
+                            something in their environment changes.
+                        </p>
+                        <p class="left">My current plan is to:</p>
+                        <ul>
+                            <li>Use the robots' camera server to track the robots' positions</li>
+                            <li>Use an LLM to:</li>
+                            <li class="indent">Plan initial robot routes</li>
+                            <li class="indent">Navigate around obstacles</li>
+                            <li class="indent">Replan routes when the environment changes</li>
+                            <li class="indent">Replan routes when a human intervenes and changes the robot's course</li>
+                            <li>Communicate the planned route to each robot using a behavior tree</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="margin-left: 25%;">The HeRo Robot swarm in action:</p>
+                        <img src="https://raw.githubusercontent.com/herolab-uga/heroswarmv2/refs/heads/main/images/rendezvous_gif.gif"
+                            alt="The HeRo Robot Swarm in Action">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="collapsible">
+                <h3>Cinema E-Booking Site <a target="_blank" href="https://github.com/YuvalDeshe/CinemaBooker"><i
+                            class="fa-brands fa-github"></i></a></h3>
+            </button>
+            <div class="collapsible-content">
+                <div class="collapsible-flex-container">
+                    <div>
+                        <h3>CSCI 6050 - Software Engineering (Graduate Level) | Fall 2025</h3>
+                        <ul>
+                            <li>Served as the team leader in a group of five students</li>
+                            <li class="indent">Led weekly SCRUM meetings</li>
+                            <li class="indent">Kept team members on track</li>
+                            <li class="indent">Amended team conflicts</li>
+                            <li>Built a full-stact React/Node.js application using HTML, CSS, Tailwind CSS, and
+                                TypeScript
+                            </li>
+                            <li>Connected to a MongoDB NoSQL database</li>
+                            <li>Utilized an MVC architecture to emphasize separation of concerns and maintain the
+                                project's
+                                modifiability
+                            </li>
+                            <li>Implemented Builder, Facade, and Decorator design patterns</li>
+                            <li>Emphasized SOLID design principles</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="margin-left: 25%;">Cinema E-Booking Site:</p>
+                        <img src="./images/Cinema-E-Booker.PNG" alt="Cinema E-Booking Site">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="collapsible">
+                <h3>Scale Explorer <a target="_blank" href="https://github.com/BretZP/WebProject"><i
+                            class="fa-brands fa-github"></i></a></h3>
+            </button>
+            <div class="collapsible-content">
+                <div class="collapsible-flex-container">
+                    <div>
+                        <h3>CSCI 4300 - Web Development | Spring 2025</h3>
+                        <ul>
+                            <li>Served as the team leader in a group of four students</li>
+                            <li>Created a full-stack web application using React and Node.js to help UGA students learn
+                                their guitar scales</li>
+                            <li>Designed the UI in Figma</li>
+                            <li>Coordinated the team with Miro</li>
+                            <li>Connected with MongoDB</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="margin-left: 25%;">Scale Explorer:</p>
+                        <img src="./images/Scale-Explorer.PNG" alt="Scale Explorer">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="collapsible">
+                <h3>Bash Shell <a target="_blank" href="https://github.com/Yuval-Deshe/shell"><i
+                            class="fa-brands fa-github"></i></a></h3>
+            </button>
+            <div class="collapsible-content">
+                <div class="collapsible-flex-container">
+                    <div>
+                        <h3>CSCI 1730 - Systems Programming | Fall 2023</h3>
+                        <ul>
+                            <li>Familiarized myself with function calls in C by using them to simulate a Bash shell</li>
+                            <li>Furthered my understanding of Unix's commands and file structure</li>
+                            <li>Formatted the text prompt to appear the same as a regular Bash shell</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="margin-left: 25%;">Scale Explorer:</p>
+                        <img src="./images/bash.png" alt="Scale Explorer">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <footer>
-        <p>&copy;</p> <a href="./contact.html">Yuval Deshe</a> <p>▪</p>
+        <p>&copy; Yuval Deshe</p>
+        <p>▪</p>
         <a target="_blank" href="https://www.linkedin.com/in/yuvaldeshe/"><i class="fab fa-linkedin"></i></a>
     </footer>
 </body>
 
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+    function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    document.addEventListener("keydown", function (event) {
+        const overlay = document.getElementById("overlay");
+        if (event.key === "Escape" && overlay.style.display === "block") {
+            off();
+        }
+    });
+</script>

@@ -3,29 +3,161 @@
     --primary-background-color: #35183F;
     --secondary-background-color: #24213C;
     --accent-color: #6A3C66;
+    --heading-color: #EAEAEA;
+    --text-color: #e0e0e0;
+    --link-color: #A387A1;
 }
 
+/* Contact overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+/* collapsible dropdown */
+.collapsible {
+    background-color: var(--secondary-background-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: var(--accent-color);
+    text-align: left;
+    outline: none;
+    margin: 1em;
+    position: relative;
+    padding-left: 2.5em;
+}
+
+.collapsible::after {
+    content: "▶";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+}
+
+.collapsible.active::after {
+    content: "▼";
+}
+
+.collapsible:hover {
+    background-color: var(--accent-color);
+}
+
+.collapsible-content {
+    border-radius: 20px;
+    padding: 0 18px;
+    margin-left: 3em;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible-content h3 {
+    margin: 0px;
+}
+
+.collapsible>h3 {
+    margin: 0px;
+}
+
+.collapsible-flex-container {
+    display: flex;
+    gap: 2em;
+}
+
+.collapsible-flex-container>div {
+    flex: 1;
+}
+
+.collapsible-flex-container img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 25%;
+}
+
+@media (max-width: 900px) {
+    .collapsible-flex-container>div {
+        width: 100%;
+    }
+
+    .collapsible-flex-container {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .collapsible-flex-container img {
+        margin: 0px;
+    }
+
+    .collapsible-flex-container>div p {
+        margin: 0px;
+    }
+}
 
 /* General Styles */
 body {
-    /* margin: 1em; */
     background-color: var(--secondary-background-color);
 }
+
 a {
-    color:blue;
-    text-decoration: none;
+    color: var(--link-color);
+    text-decoration: underline;
 }
+
 a:hover {
     color: #3D3D3D;
     transition: color 600ms linear;
 }
+
 p {
-    color: #3D3D3D;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+section h3 {
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+section ul {
+    display: inline;
+    width: auto;
+    margin: 0px;
+}
+
+.indent {
+    margin-left: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.indent h3 {
+    margin: 0px;
+}
+
+.left {
+    text-align: left;
+    margin: 0px;
 }
 
 /* Nav Styles */
 nav {
-    background-color: var(--secondary-background-color); 
+    background-color: var(--secondary-background-color);
     margin: 0px;
     box-shadow: 0px 2px 2px black;
     display: flex;
@@ -34,24 +166,36 @@ nav {
     top: 0;
 }
 
-nav p, nav a {
+nav p,
+nav a {
     font-size: 20px;
     padding: 5px;
     margin: 0;
+    color:var(--text-color); 
+    text-decoration: none
+}
+
+button {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    padding: 4px;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
 /* Footer Styles */
 footer {
     width: 100%;
-    background-color: #578E7E; 
-    position: fixed; 
+    background-color: var(--accent-color);
+    position: fixed;
     bottom: 0;
     box-shadow: 0px -2px #3D3D3D;
     display: flex;
     justify-content: center;
 }
 
-footer a, footer p {
+footer a,
+footer p {
     padding: 5px;
     margin: 0;
 
@@ -71,13 +215,21 @@ footer a, footer p {
     font-size: 40px;
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    color: var(--heading-color);
+    margin: 0px;
+}
+
+.splash h2 {
+    font-size: 30px;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    text-align: left;
+    color: var(--heading-color);
 }
 
 .splash img {
     border-radius: 25%;
-    border: 2px solid #3D3D3D;
+    border: 2px solid var(--accent-color);
     display: inline-block;
     margin: 1em;
     width: 300px;
@@ -113,6 +265,12 @@ section {
     justify-content: center;
 }
 
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 /* Section Headings */
 section h2 {
     margin: 0 auto auto auto;
@@ -120,8 +278,8 @@ section h2 {
     text-align: center;
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
-    font-weight: 300;
     font-style: normal;
+    color: var(--heading-color);
 }
 
 /* Paragraph Styles */
@@ -135,7 +293,7 @@ section p {
 
 /* List Styles */
 ul {
-    color: #3D3D3D;
+    color: var(--text-color);
     display: block;
     margin: 0 40%;
     width: auto;
@@ -146,11 +304,11 @@ ul {
 }
 
 dl {
-    color: #3D3D3D;
+    color: var(--text-color);
     display: grid;
     gap: 0;
     border: 1px solid #3D3D3D;
-    grid-template:  auto auto / minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-template: auto auto / minmax(300px, 1fr) minmax(300px, 1fr);
     grid-auto-rows: auto;
     margin: 1em 25%;
     width: 50%;
@@ -160,14 +318,14 @@ dl {
     font-style: normal;
 }
 
-dl dt{
+dl dt {
     text-align: center;
     border-width: 1px 0 1px 1px;
     border-style: solid;
     border-color: #3D3D3D;
 }
 
-dl dd{
+dl dd {
     margin: 0;
     text-align: center;
     border-width: 1px 1px 1px 0;
@@ -183,14 +341,33 @@ dl dd{
     justify-self: center;
     gap: 50px;
 }
+
 .card {
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
     align-content: center;
     border: 1px solid black;
     box-shadow: 5px 5px 10px 0;
-    /* style the card. make sure to find a picture for each one and add it to the html! */
+    background-color: var(--secondary-background-color);
+    /* margin: 25%; */
+    margin-left: 25%;
+    margin-top: 10%;
+    /* margin-bottom: 50%; */
+    height: 50%;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-content: center;
 }
 
 .card ul {
@@ -201,8 +378,8 @@ dl dd{
     margin: 1em;
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
+    color: var(--heading-color);
 }
 
 .card img {
@@ -223,7 +400,8 @@ form {
 }
 
 
-form input, form textarea {
+form input,
+form textarea {
     margin: 10px;
     border-radius: 5px;
     border: 2px solid grey;
@@ -233,12 +411,14 @@ form input, form textarea {
     font-style: normal;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
     border-color: black;
     transition: border-color 0.5s linear;
 }
 
-form input:hover, form textarea:hover {
+form input:hover,
+form textarea:hover {
     transition-duration: 10ms;
     border-color: black;
 }
@@ -250,7 +430,7 @@ form button {
     font-style: normal;
     font-size: 16px;
 
-    background-color:#578E7E;
+    background-color: #578E7E;
     color: black;
     width: fit-content;
     height: 35px;
@@ -261,8 +441,8 @@ form button {
 
 form button:hover {
     transition-duration: 500ms;
-    background-color:#F5ECD5;
-    color:#578E7E;
+    background-color: #F5ECD5;
+    color: #578E7E;
 }
 
 #thankyou {
