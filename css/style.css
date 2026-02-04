@@ -461,4 +461,8 @@ form button:hover {
     .flex-item {
         word-break: break-all;
     }
+
+    .optional {
+        display: none;
+    }
 }
